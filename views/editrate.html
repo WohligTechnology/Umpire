@@ -1,0 +1,21 @@
+<div class="page">
+    <h2 class="title">
+</h2>
+
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel panel-default" style="border-radius:0px;">
+                <div class="panel-heading panel-hdr"><span class="glyphicon glyphicon-th mr5"></span>Edit Rate
+                </div>
+                <div class="panel-body">
+                    <form name="form_constraints" class="form-validation" data-ng-submit="submitForm()">
+                        <div class='form-group ui-selecter'><label for='exampleInputEmail1'>Select Match</label><div class='form-group'><ui-select multiple tagging tagging-label='false' ng-model = 'rate.match' on-select='ismatchMatch(rate.match,$select);'><ui-select-match placeholder='Select Match'>{{$item.name}}</ui-select-match><ui-select-choices repeat='person in match track by person._id' refresh='refreshMatch($select.search,$select.selected)' refresh-delay='0'><div ng-bind-html='person.name'></div></ui-select-choices></ui-select></div></div><div class='form-group'><label>Over</label><input type='text' class='form-control' ng-model = 'rate.over' placeholder='Over' > </div><div class='form-group'><label>Ball</label><input type='text' class='form-control' ng-model = 'rate.ball' placeholder='Ball' > </div><div class='form-group'><label>Favourite</label><input type='text' class='form-control' ng-model = 'rate.favourite' placeholder='Favourite' > </div><div class='form-group'><label>Team 1 Back</label><input type='text' class='form-control' ng-model = 'rate.team1back' placeholder='Team 1 Back' > </div><div class='form-group'><label>Team 2 Back</label><input type='text' class='form-control' ng-model = 'rate.team2back' placeholder='Team 2 Back' > </div><div class='form-group'><label>Team 1 Lay</label><input type='text' class='form-control' ng-model = 'rate.team1lay' placeholder='Team 1 Lay' > </div><div class='form-group'><label>Team 2 Lay</label><input type='text' class='form-control' ng-model = 'rate.team2lay' placeholder='Team 2 Lay' > </div><!--Add New Tags-->
+                        <div class="text-center" style="padding-bottom:20px;">
+                            <button type="submit" class="btn btn-primary all-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<div class="page">
+   <h2 class="title">
+</h2>
+
+   <div class="row">
+      <div class="col-md-12">
+         <section class="panel panel-default" style="border-radius:0px;">
+            <div class="panel-heading panel-hdr"><span class="glyphicon glyphicon-th mr5"></span>Edit Match
+            </div>
+            <div class="panel-body">
+               <form name="form_constraints" class="form-validation" data-ng-submit="submitForm()">
+                  <div class='form-group ui-selecter'>
+                     <label for='exampleInputEmail1'>Select Team 1</label>
+                     <div class='form-group'>
+                        <ui-select multiple tagging tagging-label='false' ng-model='match.team1' on-select='ismatchTeam1(match.team 1,$select);'>
+                           <ui-select-match placeholder='Select Team 1'>{{$item.name}}</ui-select-match>
+                           <ui-select-choices repeat='person in team 1 track by person._id' refresh='refreshTeam1($select.search,$select.selected)' refresh-delay='0'>
+                              <div ng-bind-html='person.name'></div>
+                           </ui-select-choices>
+                        </ui-select>
+                     </div>
+                  </div>
+                  <div class='form-group ui-selecter'>
+                     <label for='exampleInputEmail1'>Select Team 2</label>
+                     <div class='form-group'>
+                        <ui-select multiple tagging tagging-label='false' ng-model='match.team2' on-select='ismatchTeam2(match.team 2,$select);'>
+                           <ui-select-match placeholder='Select Team 2'>{{$item.name}}</ui-select-match>
+                           <ui-select-choices repeat='person in team 2 track by person._id' refresh='refreshTeam2($select.search,$select.selected)' refresh-delay='0'>
+                              <div ng-bind-html='person.name'></div>
+                           </ui-select-choices>
+                        </ui-select>
+                     </div>
+                  </div>
+                  <div class='form-group'>
+                     <label>Venue</label>
+                     <input type='text' class='form-control' ng-model='match.venue' placeholder='Venue'> </div>
+                  <div class='form-group'>
+                     <label>Overs</label>
+                     <input type='text' class='form-control' ng-model='match.overs' placeholder='Overs'> </div>
+                  <div class='form-group'>
+                     <label>Link</label>
+                     <input type='text' class='form-control' ng-model='match.link' placeholder='Link'> </div>
+                  <div class='form-group'>
+                     <label>Result</label>
+                     <input type='text' class='form-control' ng-model='match.result' placeholder='Result'> </div>
+                  <div class='form-group ui-selecter'>
+                     <label for='exampleInputEmail1'>Select Tournament</label>
+                     <div class='form-group'>
+                        <ui-select multiple tagging tagging-label='false' ng-model='match.tournament' on-select='ismatchTournament(match.tournament,$select);'>
+                           <ui-select-match placeholder='Select Tournament'>{{$item.name}}</ui-select-match>
+                           <ui-select-choices repeat='person in tournament track by person._id' refresh='refreshTournament($select.search,$select.selected)' refresh-delay='0'>
+                              <div ng-bind-html='person.name'></div>
+                           </ui-select-choices>
+                        </ui-select>
+                     </div>
+                  </div>
+                  <div class='form-group'>
+                     <label for='exampleInputEmail1'>Result Desc</label>
+                     <textarea class='form-control' ng-model='match.resultdesc' placeholder='Result Desc'></textarea>
+                  </div>
+                  <div class='form-group ui-selecter'>
+                     <label for='exampleInputEmail1'>Select Toss</label>
+                     <div class='form-group'>
+                        <ui-select multiple tagging tagging-label='false' ng-model='match.toss' on-select='ismatchToss(match.toss,$select);'>
+                           <ui-select-match placeholder='Select Toss'>{{$item.name}}</ui-select-match>
+                           <ui-select-choices repeat='person in toss track by person._id' refresh='refreshToss($select.search,$select.selected)' refresh-delay='0'>
+                              <div ng-bind-html='person.name'></div>
+                           </ui-select-choices>
+                        </ui-select>
+                     </div>
+                  </div>
+                  <div class='form-group'>
+                     <label>First Bat</label>
+                     <input type='text' class='form-control' ng-model='match.firstbat' placeholder='First Bat'> </div>
+                  <div class='form-group'>
+                     <label>Team 1 Score</label>
+                     <input type='text' class='form-control' ng-model='match.team1score' placeholder='Team 1 Score'> </div>
+                  <div class='form-group'>
+                     <label>Team 2 Score</label>
+                     <input type='text' class='form-control' ng-model='match.team2score' placeholder='Team 2 Score'> </div>
+                  <div class='form-group'>
+                     <label>Status</label>
+                     <select ng-model='match.status' class='form-control'>
+                        <option value='enabled'>Enabled</option>
+                        <option value='disabled'>Disabled</option>
+                     </select>
+                  </div>
+                  <div class='form-group'>
+                     <label>New Target</label>
+                     <input type='text' class='form-control' ng-model='match.newtarget' placeholder='New Target'> </div>
+                  <div class='form-group'>
+                     <label>New Overs</label>
+                     <input type='text' class='form-control' ng-model='match.newovers' placeholder='New Overs'> </div>
+                  <!--Add New Tags-->
+                  <div class="text-center" style="padding-bottom:20px;">
+                     <button type="submit" class="btn btn-primary all-btn">Submit</button>
+                  </div>
+               </form>
+            </div>
+         </section>
+      </div>
+   </div>
+</div>
