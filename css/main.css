@@ -37,7 +37,7 @@ a:hover {
   -o-transition: all ease 300ms;
   transition: all ease 300ms;
 }
-.btn-primary:active:hover, .btn-primary.active:hover, .open>.dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open>.dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open>.dropdown-toggle.btn-primary.focus, .btn-primary:hover, .btn-primary:active {
+.btn-primary:active:hover, .btn-primary.active:hover, .open>.dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open>.dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open>.dropdown-toggle.btn-primary.focus, .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary.focus {
   background-color: #FFFFFF;
   border-color: #3e50b4;
   color: #3e50b4;
@@ -114,7 +114,6 @@ ul.socialicons li i:hover {
 .img {
   width: 100%;
 }
-.template {}
 .template.headermenu {
   background: #E9E7E7;
   padding: 5px;
@@ -135,7 +134,9 @@ ul.socialicons li i:hover {
   padding: 10px;
   color: #444;
 }
-.template.content {}
+.templatemain.content {
+  padding-top: 15px;
+}
 .template.footer {
   /* background: #5C5B5B; */
   padding: 0;
